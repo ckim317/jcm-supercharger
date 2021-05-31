@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supercharger Map</title>
+
+    <!-- stylesheets including Materialize and custom -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;500&family=Roboto+Slab:wght@300&display=swap"      rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css"/>
+
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-wrapper">
+                
+              <div><a href="#" class="center brand-logo logo-text grey-text darken-4"><img src="./assets/images/bolt.png" height="27" > SUPERCHARGER <img src="./assets/images/bolt-r.png" height="27"></a></div>
+              <ul id="nav-mobile" class="href-text darken-4 right">
+                
+                <!-- <i class="large material-icons">flash_on</i> -->
+
+                <li><a class="grey-text darken-4" href="#">about</a></li>
+                <li><a class="grey-text darken-4" href="#">contact</a></li>
+                <li style="width:20px"></li>
+              </ul>
+            </div>
+          </nav>
+    </header>
+
+    <main class="container">
+
+        <div style="height:50px"></div>
+
+        <!-- flexbox container for the two main columns -->
+        <div class="row">
+
+            <div class="grey-text darken-4 col s4 hoverable zipCode card-styling">
+                <!-- form for zip code entry -->
+               <h5>Recharge?</h5>
+                <p>Have an EV and need a quick recharge away from home? Submit an area zip code below to generate a map marking the nearby locations for charging stations!</p>
+
+                <div style="height:25px"></div>
+
+                <form>
+
+                    <span>
+                        <label>
+                          <input class="checkbox-round" type="checkbox" id="option-1"/>
+                          <span>Option 1</span>
+                        </label>
+                      </span>
+
+                      <p>
+                        <label>
+                          <input class="checkbox-round" type="checkbox" id="option-2"/>
+                          <span>Option 2</span>
+                        </label>
+                      </p>
+
+                      <br>
+                    <div class="input-field">
+                        <input type="text" id="zip">
+                        <label class="active" for="zip-code">5-digit zip code</label>
+                    </div> 
+
+
+                    <input class="btn-flat white-text grey" type="submit" value="Search" id="search-button"> 
+
+
+                </form>
+                
+               
+                <div style="height:25px"></div>
+
+            </div>
+
+            <div class="col s.5"></div>
+
+            <div class="card-styling col s7 mainMap" >
+                <!-- map display -->
+               
+                <iframe id="map_canvas"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3147.1079747227936!2d-120.42364418397035!3d37.92790791110593!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8090c49129b6ac57%3A0xb56c7eb95a2cd8bd!2sMain%20St%2C%20California%2095327!5e0!3m2!1sen!2sus!4v1616426329495!5m2!1sen!2sus"
+                class="google-maps iframe" style="border:0;" 
+                allow="fullscreen"
+                loading="lazy">
+                
+              </iframe>  
+              
+            </div>
+
+
+        </div>
+
+    </main>
+
+    <footer>
+        <p class="grey-text darken-4 footer-text">&#169 2021 lorem ipsum</p>
+    </footer>
+
+    <script src="./assets/js/script.js"/>
+</body>
+</html>
